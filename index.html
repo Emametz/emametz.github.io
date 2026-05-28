@@ -1,13 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Emily Mametz | Personal Page</title>
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      body {
+         font-family: 'Georgia', serif;
+         background-color: #f0f4f0;
+         color: #2d3b2d;
+         line-height: 1.7;
+      }
+
+      header {
+         background-color: #7a9e7e;
+         color: #fff;
+         padding: 40px 20px;
+         text-align: center;
+      }
+
+      header h1 {
+         font-size: 2.4rem;
+         letter-spacing: 1px;
+         margin-bottom: 6px;
+      }
+
+      header p {
+         font-size: 1.1rem;
+         color: #e8f0e8;
+      }
+
+      nav {
+         background-color: #5c7f61;
+         text-align: center;
+         padding: 12px;
+      }
+
+      nav a {
+         color: #fff;
+         text-decoration: none;
+         font-size: 0.95rem;
+         letter-spacing: 0.5px;
+      }
+
+      nav a:hover {
+         text-decoration: underline;
+      }
+
+      main {
+         max-width: 860px;
+         margin: 40px auto;
+         padding: 0 20px;
+      }
+
+      section {
+         background-color: #fff;
+         border-left: 5px solid #7a9e7e;
+         border-radius: 4px;
+         padding: 28px 32px;
+         margin-bottom: 30px;
+         box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      }
+
+      section h2 {
+         font-size: 1.3rem;
+         color: #5c7f61;
+         margin-bottom: 12px;
+         text-transform: uppercase;
+         letter-spacing: 0.8px;
+      }
+
+      section p {
+         font-size: 1rem;
+         color: #3a4a3a;
+      }
+
+      ul {
+         padding-left: 20px;
+         color: #3a4a3a;
+      }
+
+      ul li {
+         margin-bottom: 6px;
+      }
+
+      .course-link {
+         display: inline-block;
+         margin-top: 12px;
+         background-color: #7a9e7e;
+         color: #fff;
+         padding: 10px 22px;
+         border-radius: 4px;
+         text-decoration: none;
+         font-size: 0.95rem;
+      }
+
+      .course-link:hover {
+         background-color: #5c7f61;
+      }
+
+      footer {
+         text-align: center;
+         padding: 30px 20px;
+         font-size: 0.85rem;
+         color: #6a826a;
+      }
+
+      .validators {
+         margin-top: 14px;
+      }
+
+      .validators img {
+         margin: 0 6px;
+      }
+   </style>
 </head>
 <body>
-    <p>Emily's website</p>
-    <a href="https://webpages.charlotte.edu/emametz/itis3135/">Click to go to my itis3135 Site</a> 
+
+   <header>
+      <h1>Emily Mametz</h1>
+      <p>Computer Science Student &amp; AI Enthusiast</p>
+   </header>
+
+   <nav>
+      <a href="https://webpages.charlotte.edu/emametz/">webpages.charlotte.edu/emametz</a>
+   </nav>
+
+   <main>
+
+      <section>
+         <h2>About Me</h2>
+         <p>
+            Hi, I'm Emily! I'm a Computer Science student at UNC Charlotte with a concentration in
+            AI-Assisted Software Development. I'm passionate about building things, solving problems,
+            and exploring how artificial intelligence is shaping the future of software.
+         </p>
+      </section>
+
+      <section>
+         <h2>Interests &amp; Hobbies</h2>
+         <ul>
+            <li>🎮 Gaming on my custom PC — my go-to way to unwind</li>
+            <li>🐕 Spending time with my corgi</li>
+            <li>👫 Hanging out with my boyfriend, friends, and family</li>
+            <li>💻 Exploring AI tools and new technologies</li>
+         </ul>
+      </section>
+
+      <section>
+         <h2>Course Work</h2>
+         <p>
+            I'm currently enrolled in ITIS 3135: Front-End Web App Development at UNCC.
+            You can view my course page and projects at the link below.
+         </p>
+         <a class="course-link" href="https://webpages.charlotte.edu/emametz/itis3135/">
+            View My ITIS 3135 Course Page &rarr;
+         </a>
+      </section>
+
+   </main>
+
+   <footer>
+      <p>Emily Mametz &copy; 2026</p>
+      <div class="validators">
+         <a href="https://validator.w3.org/check?uri=https://webpages.charlotte.edu/emametz/">
+            <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML">
+         </a>
+         <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://webpages.charlotte.edu/emametz/">
+            <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS">
+         </a>
+      </div>
+   </footer>
+
 </body>
 </html>
