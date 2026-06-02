@@ -1,0 +1,30 @@
+
+
+body {
+   font-family: Arial, sans-serif;
+   max-width: 900px;
+   margin: 0 auto;
+   padding: 20px;
+}
+
+h1 {
+   color: #005035;
+}
+
+nav {
+   margin: 10px 0;
+}
+
+nav a {
+   text-decoration: none;
+   color: #005035;
+}
+
+nav a:hover {
+   text-decoration: underline;
+}
+
+footer {
+   margin-top: 30px;
+   font-size: 0.9em;
+}
