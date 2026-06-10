@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaming | Emily Mametz</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #1a1a2e;
+      color: #e0e0e0;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #16213e;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 3px solid #e94560;
+    }
+
+    header h1 {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 1.2rem;
+      color: #e94560;
+      margin-bottom: 15px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    nav a {
+      background-color: #0f3460;
+      color: #e0e0e0;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      background-color: #e94560;
+      color: #fff;
+    }
+
+    nav a.active {
+      background-color: #e94560;
+      color: #fff;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    section {
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    section h2 {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 1rem;
+      color: #e94560;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #0f3460;
+    }
+
+    section p {
+      margin-bottom: 15px;
+    }
+
+    .card-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .card {
+      background-color: #16213e;
+      border: 1px solid #0f3460;
+      border-radius: 6px;
+      padding: 15px;
+      flex: 1 1 220px;
+    }
+
+    .card h3 {
+      color: #e94560;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #b0b0c0;
+      margin-bottom: 0;
+    }
+
+    figure {
+      margin: 25px 0;
+      text-align: center;
+    }
+
+    figure img {
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      border-radius: 6px;
+      border: 2px solid #0f3460;
+      display: block;
+      margin: 0 auto;
+    }
+
+    figcaption {
+      margin-top: 8px;
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    figcaption em {
+      font-style: italic;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.9rem;
+    }
+
+    th {
+      background-color: #0f3460;
+      color: #e94560;
+      padding: 10px;
+      text-align: left;
+    }
+
+    td {
+      padding: 10px;
+      border-bottom: 1px solid #0f3460;
+    }
+
+    tr:hover td {
+      background-color: #16213e;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+      margin: 15px 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: #e0e0e0;
+      font-size: 0.9rem;
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+      width: 100%;
+      max-width: 400px;
+      background-color: #16213e;
+      border: 1px solid #0f3460;
+      border-radius: 4px;
+      color: #e0e0e0;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.95rem;
+      padding: 8px 10px;
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    input[type="text"]:focus,
+    select:focus,
+    textarea:focus {
+      outline: 2px solid #e94560;
+    }
+
+    button[type="submit"] {
+      background-color: #e94560;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #c73652;
+    }
+
+    footer {
+      background-color: #16213e;
+      border-top: 3px solid #e94560;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    footer p {
+      margin-bottom: 10px;
+    }
+
+    footer .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    footer a {
+      color: #e94560;
+      text-decoration: none;
+      border: 1px solid #e94560;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+
+    footer a:hover {
+      background-color: #e94560;
+      color: #fff;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 0.85rem;
+      }
+      .card-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>&#9670; My Gaming Hobby</h1>
+    <nav aria-label="Page sections">
+      <a href="#" class="nav-link active" data-target="what">Home</a>
+      <a href="#" class="nav-link" data-target="who">About</a>
+      <a href="#" class="nav-link" data-target="when">Schedule</a>
+      <a href="#" class="nav-link" data-target="where">Places</a>
+      <a href="#" class="nav-link" data-target="how">How to Play</a>
+      <a href="#" class="nav-link" data-target="why">Why I Love It</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HOME -->
+    <section id="what" class="active">
+      <h2>Home</h2>
+
+      <p>Video gaming is one of my favorite hobbies. It involves playing interactive games on a computer, console, or phone. Games can be anything from solving puzzles to exploring huge open worlds to competing against other players online.</p>
+
+      <p>There are so many different types of games out there — something for everyone. I personally love RPGs and story-driven games where you get to make choices and explore.</p>
+
+      <figure>
+        <img src="images/what-hero.png" alt="A gaming setup with a monitor, keyboard, and controller on a desk" width="700" height="400" />
+        <figcaption><em>A typical gaming setup at home.</em></figcaption>
+      </figure>
+
+      <div class="card-row">
+        <div class="card">
+          <h3>Single-Player Games</h3>
+          <p>Games you play alone, usually with a big story to follow. Great for relaxing and getting lost in another world.</p>
+        </div>
+        <div class="card">
+          <h3>Multiplayer Games</h3>
+          <p>Games where you play with or against other people online. Really fun with friends.</p>
+        </div>
+        <div class="card">
+          <h3>Indie Games</h3>
+          <p>Smaller games made by independent developers. Some of my favorites have been indie games — they get really creative.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="who">
+      <h2>About Me</h2>
+
+      <p>A lot of people think gaming is just for kids or teenage boys, but that is not true at all. People of all ages and backgrounds play video games. The average gamer in the US is actually in their 30s, and almost half of all gamers are women.</p>
+
+      <p>I have been gaming for as long as I can remember. It started with simple games and grew into a real passion over the years.</p>
+
+      <figure>
+        <img src="images/who-gamers.png" alt="A group of friends sitting together playing video games and laughing" width="700" height="400" />
+        <figcaption><em>Gaming is more fun with friends.</em></figcaption>
+      </figure>
+
+      <table>
+        <caption style="text-align:left; margin-bottom:8px; font-weight:600;">My Gamer Profile</caption>
+        <thead>
+          <tr>
+            <th scope="col">Category</th>
+            <th scope="col">My Answer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Favorite Genre</td><td>FPS / Action-Adventure</td></tr>
+          <tr><td>Favorite Platform</td><td>PC and Console</td></tr>
+          <tr><td>All-Time Favorite Game</td><td>Spiderman PS4</td></tr>
+          <tr><td>How Long I've Played</td><td>Most of my life</td></tr>
+        </tbody>
+      </table>
+
+      <div class="card-row">
+        <div class="card">
+          <h3>Casual Players</h3>
+          <p>Play here and there when they have free time. Usually stick to simpler or mobile games.</p>
+        </div>
+        <div class="card">
+          <h3>Dedicated Gamers</h3>
+          <p>Really into games and follow new releases. Have a favorite genre or two and play regularly.</p>
+        </div>
+        <div class="card">
+          <h3>Competitive Players</h3>
+          <p>Play seriously in ranked modes or tournaments. Some even go pro and compete for prizes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCHEDULE -->
+    <section id="when">
+      <h2>My Gaming Schedule</h2>
+
+      <p>Gaming fits into pretty much any schedule because you can play for 20 minutes or 5 hours depending on what you feel like. There is no real season for it — you can game any time of year.</p>
+
+      <p>That said, there are definitely better times to game than others, and the gaming calendar does have some patterns worth knowing about.</p>
+
+      <figure>
+        <img src="images/when-cozy.png" alt="Someone playing a video game on a couch wrapped in a blanket on a winter evening" width="700" height="400" />
+        <figcaption><em>Winter nights are perfect for long gaming sessions.</em></figcaption>
+      </figure>
+
+      <div class="card-row">
+        <div class="card">
+          <h3>Friday Nights</h3>
+          <p>No school or work the next morning, so it is easy to stay up late and have a longer session.</p>
+        </div>
+        <div class="card">
+          <h3>Weekends</h3>
+          <p>Best time for big gaming days. You can really get into a game without watching the clock.</p>
+        </div>
+        <div class="card">
+          <h3>After Class</h3>
+          <p>Even 30 to 45 minutes after a long day is a great way to decompress before studying again.</p>
+        </div>
+      </div>
+
+      <h3 style="margin: 20px 0 10px; color: #e94560;">Game Release Seasons</h3>
+      <ul>
+        <li><strong>Spring:</strong> Indie games and smaller releases. Usually some good sales on older titles too.</li>
+        <li><strong>Summer:</strong> Big game announcements and demo events like Summer Game Fest. Steam Summer Sale happens here.</li>
+        <li><strong>Fall:</strong> The biggest season — most major releases drop between September and November.</li>
+        <li><strong>Winter:</strong> Holiday sales and a good time to catch up on your backlog.</li>
+      </ul>
+    </section>
+
+    <!-- PLACES -->
+    <section id="where">
+      <h2>My Favorite Places to Play</h2>
+
+      <p>You can game just about anywhere these days — at home, at a friend's place, or even on your phone while waiting somewhere. But some spots are definitely better than others.</p>
+
+      <figure>
+        <img src="images/where-setup.png" alt="A home gaming desk setup with a monitor and controller in a cozy room" width="700" height="400" />
+        <figcaption><em>Home setups are the most comfortable place to game.</em></figcaption>
+      </figure>
+
+      <div class="card-row">
+        <div class="card">
+          <h3>At Home</h3>
+          <p>The most comfortable option. You have your own setup, your own snacks, and no one rushing you.</p>
+        </div>
+        <div class="card">
+          <h3>A Friend's Place</h3>
+          <p>Co-op and local multiplayer games are way more fun when you are actually in the same room.</p>
+        </div>
+        <div class="card">
+          <h3>Esports Venues</h3>
+          <p>Charlotte has esports facilities you can visit. Watching or joining a live tournament is a totally different experience.</p>
+        </div>
+      </div>
+
+      <table>
+        <caption style="text-align:left; margin-bottom:8px; font-weight:600;">Charlotte Area Gaming Options</caption>
+        <thead>
+          <tr>
+            <th scope="col">Place</th>
+            <th scope="col">Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>UNCC Esports Arena</td><td>Students and competitive gaming</td></tr>
+          <tr><td>Local game stores</td><td>Community events and trading games</td></tr>
+          <tr><td>Home or dorm room</td><td>Everyday gaming and long sessions</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- HOW TO PLAY -->
+    <section id="how">
+      <h2>How to Play</h2>
+
+      <p>Getting into gaming is easier now than it has ever been. You do not need a lot of money to start, and there are tons of free games available. Here is a simple way to get started.</p>
+
+      <figure>
+        <img src="images/how-start.png" alt="A simple beginner gaming setup with a console and controller on a clean desk" width="700" height="400" />
+        <figcaption><em>You do not need a fancy setup to start gaming.</em></figcaption>
+      </figure>
+
+      <ol>
+        <li><strong>Pick a platform.</strong> PC gives you the most options and sales. Consoles like PlayStation, Xbox, or Switch are easier to set up. Mobile is free and always with you.</li>
+        <li><strong>Start with free games.</strong> Fortnite, Minecraft (demo), and many others are free. Try a few to see what you enjoy.</li>
+        <li><strong>Find a genre you like.</strong> RPG, shooter, puzzle, platformer — there is a lot to choose from. Watch some YouTube gameplay videos before buying anything.</li>
+        <li><strong>Join a community.</strong> Subreddits, Discord servers, and YouTube channels exist for almost every game. People are usually happy to help beginners.</li>
+      </ol>
+
+      <div class="card-row">
+        <div class="card">
+          <h3>Budget Option</h3>
+          <p>Mobile or a basic PC with free-to-play games. You can have a great time spending nothing at all.</p>
+        </div>
+        <div class="card">
+          <h3>Mid Range</h3>
+          <p>A used console plus a few games is a solid setup for under $200. Great starting point.</p>
+        </div>
+        <div class="card">
+          <h3>Full Setup</h3>
+          <p>A gaming PC or current-gen console with good peripherals. This is the dream setup most people work toward over time.</p>
+        </div>
+      </div>
+
+      <h3 style="margin: 20px 0 10px; color: #e94560;">What platform are you interested in?</h3>
+      <div role="form" aria-label="Platform interest form">
+        <label for="platform-pick">Choose a platform:</label>
+        <select id="platform-pick" name="platform-pick">
+          <option value="">-- Pick one --</option>
+          <option>PC</option>
+          <option>PlayStation</option>
+          <option>Xbox</option>
+          <option>Nintendo Switch</option>
+          <option>Mobile</option>
+        </select>
+
+        <label for="first-game">What game do you want to try first?</label>
+        <input type="text" id="first-game" name="first-game" placeholder="e.g. Minecraft" />
+
+        <button type="submit" onclick="alert('Nice choice! Have fun gaming!'); return false;">Submit &#9670;</button>
+      </div>
+    </section>
+
+    <!-- WHY I LOVE IT -->
+    <section id="why">
+      <h2>Why I Love Gaming</h2>
+
+      <p>Gaming is not just something I do when I am bored. It is genuinely something I enjoy and look forward to. There are a lot of real reasons why gaming has been such a big part of my life.</p>
+
+      <p>It helps me relax after long days of class and work. When everything feels overwhelming, sitting down with a good game for an hour resets my brain in a way that nothing else really does.</p>
+
+      <figure>
+        <img src="images/why-fun.png" alt="Someone smiling while playing a video game, relaxed and having fun" width="700" height="400" />
+        <figcaption><em>Gaming is one of the best ways I know to unwind.</em></figcaption>
+      </figure>
+
+      <div class="card-row">
+        <div class="card">
+          <h3>It Reduces Stress</h3>
+          <p>Having something fun to focus on that is completely separate from real-world problems is genuinely helpful for mental health.</p>
+        </div>
+        <div class="card">
+          <h3>It Builds Skills</h3>
+          <p>Problem solving, pattern recognition, quick thinking — gaming actually sharpens a lot of skills that carry over into everyday life and even coding.</p>
+        </div>
+        <div class="card">
+          <h3>It Connects People</h3>
+          <p>Some of my best friendships have been built or strengthened through gaming together, even across long distances.</p>
+        </div>
+      </div>
+
+      <p>Honestly, some of the best storytelling I have ever experienced has been in video games. Games like Zelda, The Last of Us, and Stardew Valley have genuinely moved me in ways movies and books sometimes do not. That is why gaming is my hobby.</p>
+    </section>
+
+<!-- AI PROMPTS -->
+<section id="ai-prompts">
+  <h2>AI Prompts</h2>
+  <p>I only used AI for images.</p>
+  <figure>
+    <img src="images/what-hero.png" alt="A gaming setup with a monitor, keyboard, and controller on a desk" width="700" height="400" />
+    <figcaption><em>Prompt used: "Gaming desk setup with a monitor keyboard and controller, RGB lighting, dark room, photorealistic"</em></figcaption>
+  </figure>
+  <p>All images on this site were generated using an AI image tool. The prompts are listed in each figure caption throughout the site.</p>
+  <p>No AI was used for the HTML, CSS, or written text on this page.</p>
+</section>
+
+
+  </main>
+
+  <footer>
+    <p>Emily Mametz &bull; ITIS 3135 &bull; UNC Charlotte &bull; 2025</p>
+    <p>Images on this page were generated using AI image tools.</p>
+    <div class="footer-links">
+      <a href="https://validator.w3.org/check?uri=referer" target="_blank" rel="noopener">Validate HTML</a>
+      <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener">Validate CSS</a>
+      <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/emametz/itis3135/hobby" target="_blank" rel="noopener">Check Accessibility</a>
+      <a href="../index.html">&#9670; Mametz Designs</a>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var links    = document.querySelectorAll('.nav-link');
+      var sections = document.querySelectorAll('section');
+
+      function showSection(id) {
+        sections.forEach(function (s) {
+          if (s.id === id) {
+            s.classList.add('active');
+          } else {
+            s.classList.remove('active');
+          }
+        });
+        links.forEach(function (a) {
+          if (a.dataset.target === id) {
+            a.classList.add('active');
+          } else {
+            a.classList.remove('active');
+          }
+        });
+      }
+
+      links.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          showSection(this.dataset.target);
+          window.scrollTo(0, 0);
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
