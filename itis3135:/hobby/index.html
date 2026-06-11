@@ -30,12 +30,12 @@
       border-bottom: 3px solid #e94560;
     }
 
-    header h1 {
-      font-family: 'Press Start 2P', monospace;
-      font-size: 1.2rem;
-      color: #e94560;
-      margin-bottom: 15px;
-    }
+    h1 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1.2rem;
+    color: #e94560;
+    margin-bottom: 15px;
+}
 
     nav {
       display: flex;
@@ -79,7 +79,7 @@
       display: block;
     }
 
-    section h2 {
+    h2 {
       font-family: 'Press Start 2P', monospace;
       font-size: 1rem;
       color: #e94560;
@@ -88,7 +88,7 @@
       border-bottom: 2px solid #0f3460;
     }
 
-    section p {
+    p {
       margin-bottom: 15px;
     }
 
@@ -107,11 +107,13 @@
       flex: 1 1 220px;
     }
 
-    .card h3 {
-      color: #e94560;
-      font-size: 0.95rem;
-      margin-bottom: 8px;
-    }
+
+h3 {
+    color: #e94560;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
 
     .card p {
       font-size: 0.9rem;
@@ -125,7 +127,6 @@
     }
 
     figure img {
-      width: 100%;
       max-width: 700px;
       height: auto;
       border-radius: 6px;
@@ -144,12 +145,19 @@
       font-style: italic;
     }
 
+
     table {
       width: 100%;
       border-collapse: collapse;
       margin: 20px 0;
       font-size: 0.9rem;
     }
+
+    caption {
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
 
     th {
       background-color: #0f3460;
@@ -187,7 +195,6 @@
     input[type="text"],
     select,
     textarea {
-      width: 100%;
       max-width: 400px;
       background-color: #16213e;
       border: 1px solid #0f3460;
@@ -258,14 +265,12 @@
     }
 
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 0.85rem;
-      }
-      .card-row {
+    .card-row {
         flex-direction: column;
-      }
     }
+}
   </style>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -279,6 +284,7 @@
       <a href="#" class="nav-link" data-target="where">Places</a>
       <a href="#" class="nav-link" data-target="how">How to Play</a>
       <a href="#" class="nav-link" data-target="why">Why I Love It</a>
+      <a href="#" class="nav-link" data-target="ai-prompts">AI Prompts</a>
     </nav>
   </header>
 
@@ -287,16 +293,12 @@
     <!-- HOME -->
     <section id="what" class="active">
       <h2>Home</h2>
-
       <p>Video gaming is one of my favorite hobbies. It involves playing interactive games on a computer, console, or phone. Games can be anything from solving puzzles to exploring huge open worlds to competing against other players online.</p>
-
       <p>There are so many different types of games out there — something for everyone. I personally love RPGs and story-driven games where you get to make choices and explore.</p>
-
-      <figure>
-        <img src="images/what-hero.png" alt="A gaming setup with a monitor, keyboard, and controller on a desk" width="700" height="400" />
-        <figcaption><em>A typical gaming setup at home.</em></figcaption>
-      </figure>
-
+     <figure>
+    <img src="images/what-hero.png" alt="A gaming setup with a monitor, keyboard, and controller on a desk" width="700" height="400" />
+    <figcaption>A typical gaming setup at home.<br><em>AI prompt used: "Gaming desk setup with a monitor keyboard and controller, RGB lighting, dark room, photorealistic"</em></figcaption>
+</figure>
       <div class="card-row">
         <div class="card">
           <h3>Single-Player Games</h3>
@@ -316,18 +318,14 @@
     <!-- ABOUT -->
     <section id="who">
       <h2>About Me</h2>
-
       <p>A lot of people think gaming is just for kids or teenage boys, but that is not true at all. People of all ages and backgrounds play video games. The average gamer in the US is actually in their 30s, and almost half of all gamers are women.</p>
-
       <p>I have been gaming for as long as I can remember. It started with simple games and grew into a real passion over the years.</p>
-
       <figure>
-        <img src="images/who-gamers.png" alt="A group of friends sitting together playing video games and laughing" width="700" height="400" />
-        <figcaption><em>Gaming is more fun with friends.</em></figcaption>
-      </figure>
-
+    <img src="images/who-gamers.png" alt="A group of friends sitting together playing video games and laughing" width="700" height="400" />
+    <figcaption>Gaming is more fun with friends.<br><em>AI prompt used: "Group of diverse friends laughing and playing video games together on a couch, cozy living room, photorealistic"</em></figcaption>
+</figure>
       <table>
-        <caption style="text-align:left; margin-bottom:8px; font-weight:600;">My Gamer Profile</caption>
+        <caption>My Gamer Profile</caption>
         <thead>
           <tr>
             <th scope="col">Category</th>
@@ -341,7 +339,6 @@
           <tr><td>How Long I've Played</td><td>Most of my life</td></tr>
         </tbody>
       </table>
-
       <div class="card-row">
         <div class="card">
           <h3>Casual Players</h3>
@@ -361,16 +358,12 @@
     <!-- SCHEDULE -->
     <section id="when">
       <h2>My Gaming Schedule</h2>
-
       <p>Gaming fits into pretty much any schedule because you can play for 20 minutes or 5 hours depending on what you feel like. There is no real season for it — you can game any time of year.</p>
-
       <p>That said, there are definitely better times to game than others, and the gaming calendar does have some patterns worth knowing about.</p>
-
       <figure>
-        <img src="images/when-cozy.png" alt="Someone playing a video game on a couch wrapped in a blanket on a winter evening" width="700" height="400" />
-        <figcaption><em>Winter nights are perfect for long gaming sessions.</em></figcaption>
-      </figure>
-
+    <img src="images/when-cozy.png" alt="Someone playing a video game on a couch wrapped in a blanket on a winter evening" width="700" height="400" />
+    <figcaption>Winter nights are perfect for long gaming sessions.<br><em>AI prompt used: "Person wrapped in a blanket playing video games on a couch on a cozy winter evening, warm lighting, photorealistic"</em></figcaption>
+</figure>
       <div class="card-row">
         <div class="card">
           <h3>Friday Nights</h3>
@@ -385,8 +378,7 @@
           <p>Even 30 to 45 minutes after a long day is a great way to decompress before studying again.</p>
         </div>
       </div>
-
-      <h3 style="margin: 20px 0 10px; color: #e94560;">Game Release Seasons</h3>
+      <h3>Game Release Seasons</h3>
       <ul>
         <li><strong>Spring:</strong> Indie games and smaller releases. Usually some good sales on older titles too.</li>
         <li><strong>Summer:</strong> Big game announcements and demo events like Summer Game Fest. Steam Summer Sale happens here.</li>
@@ -398,14 +390,11 @@
     <!-- PLACES -->
     <section id="where">
       <h2>My Favorite Places to Play</h2>
-
       <p>You can game just about anywhere these days — at home, at a friend's place, or even on your phone while waiting somewhere. But some spots are definitely better than others.</p>
-
       <figure>
-        <img src="images/where-setup.png" alt="A home gaming desk setup with a monitor and controller in a cozy room" width="700" height="400" />
-        <figcaption><em>Home setups are the most comfortable place to game.</em></figcaption>
-      </figure>
-
+    <img src="images/where-setup.png" alt="A home gaming desk setup with a monitor and controller in a cozy room" width="700" height="400" />
+    <figcaption>Home setups are the most comfortable place to game.<br><em>AI prompt used: "Cozy home gaming desk setup with monitor and controller, RGB lighting, dark room, photorealistic"</em></figcaption>
+</figure>
       <div class="card-row">
         <div class="card">
           <h3>At Home</h3>
@@ -420,9 +409,8 @@
           <p>Charlotte has esports facilities you can visit. Watching or joining a live tournament is a totally different experience.</p>
         </div>
       </div>
-
       <table>
-        <caption style="text-align:left; margin-bottom:8px; font-weight:600;">Charlotte Area Gaming Options</caption>
+        <caption>Charlotte Area Gaming Options</caption>
         <thead>
           <tr>
             <th scope="col">Place</th>
@@ -440,21 +428,17 @@
     <!-- HOW TO PLAY -->
     <section id="how">
       <h2>How to Play</h2>
-
       <p>Getting into gaming is easier now than it has ever been. You do not need a lot of money to start, and there are tons of free games available. Here is a simple way to get started.</p>
-
       <figure>
         <img src="images/how-start.png" alt="A simple beginner gaming setup with a console and controller on a clean desk" width="700" height="400" />
-        <figcaption><em>You do not need a fancy setup to start gaming.</em></figcaption>
+        <figcaption>You do not need a fancy setup to start gaming.<br><em>AI prompt used: "Simple beginner gaming setup with a console and controller on a clean white desk, bright lighting, photorealistic"</em></figcaption>
       </figure>
-
       <ol>
         <li><strong>Pick a platform.</strong> PC gives you the most options and sales. Consoles like PlayStation, Xbox, or Switch are easier to set up. Mobile is free and always with you.</li>
         <li><strong>Start with free games.</strong> Fortnite, Minecraft (demo), and many others are free. Try a few to see what you enjoy.</li>
         <li><strong>Find a genre you like.</strong> RPG, shooter, puzzle, platformer — there is a lot to choose from. Watch some YouTube gameplay videos before buying anything.</li>
         <li><strong>Join a community.</strong> Subreddits, Discord servers, and YouTube channels exist for almost every game. People are usually happy to help beginners.</li>
       </ol>
-
       <div class="card-row">
         <div class="card">
           <h3>Budget Option</h3>
@@ -469,8 +453,7 @@
           <p>A gaming PC or current-gen console with good peripherals. This is the dream setup most people work toward over time.</p>
         </div>
       </div>
-
-      <h3 style="margin: 20px 0 10px; color: #e94560;">What platform are you interested in?</h3>
+      <h3>What platform are you interested in?</h3>
       <div role="form" aria-label="Platform interest form">
         <label for="platform-pick">Choose a platform:</label>
         <select id="platform-pick" name="platform-pick">
@@ -481,10 +464,8 @@
           <option>Nintendo Switch</option>
           <option>Mobile</option>
         </select>
-
         <label for="first-game">What game do you want to try first?</label>
         <input type="text" id="first-game" name="first-game" placeholder="e.g. Minecraft" />
-
         <button type="submit" onclick="alert('Nice choice! Have fun gaming!'); return false;">Submit &#9670;</button>
       </div>
     </section>
@@ -492,16 +473,12 @@
     <!-- WHY I LOVE IT -->
     <section id="why">
       <h2>Why I Love Gaming</h2>
-
       <p>Gaming is not just something I do when I am bored. It is genuinely something I enjoy and look forward to. There are a lot of real reasons why gaming has been such a big part of my life.</p>
-
       <p>It helps me relax after long days of class and work. When everything feels overwhelming, sitting down with a good game for an hour resets my brain in a way that nothing else really does.</p>
-
       <figure>
-        <img src="images/why-fun.png" alt="Someone smiling while playing a video game, relaxed and having fun" width="700" height="400" />
-        <figcaption><em>Gaming is one of the best ways I know to unwind.</em></figcaption>
-      </figure>
-
+    <img src="images/why-fun.png" alt="Someone smiling while playing a video game, relaxed and having fun" width="700" height="400" />
+    <figcaption>Gaming is one of the best ways I know to unwind.<br><em>AI prompt used: "Person smiling and relaxing while playing a video game, cozy room, warm lighting, photorealistic"</em></figcaption>
+</figure>
       <div class="card-row">
         <div class="card">
           <h3>It Reduces Stress</h3>
@@ -516,36 +493,52 @@
           <p>Some of my best friendships have been built or strengthened through gaming together, even across long distances.</p>
         </div>
       </div>
-
       <p>Honestly, some of the best storytelling I have ever experienced has been in video games. Games like Zelda, The Last of Us, and Stardew Valley have genuinely moved me in ways movies and books sometimes do not. That is why gaming is my hobby.</p>
     </section>
 
-<!-- AI PROMPTS -->
-<section id="ai-prompts">
-  <h2>AI Prompts</h2>
-  <p>I only used AI for images.</p>
-  <figure>
+    <!-- AI PROMPTS -->
+    <section id="ai-prompts">
+      <h2>AI Prompts</h2>
+      <p>All images on this site were generated using an AI image tool. The prompts used for each image are listed below and also appear beneath each image throughout the site.</p>
+      <figure>
     <img src="images/what-hero.png" alt="A gaming setup with a monitor, keyboard, and controller on a desk" width="700" height="400" />
-    <figcaption><em>Prompt used: "Gaming desk setup with a monitor keyboard and controller, RGB lighting, dark room, photorealistic"</em></figcaption>
-  </figure>
-  <p>All images on this site were generated using an AI image tool. The prompts are listed in each figure caption throughout the site.</p>
-  <p>No AI was used for the HTML, CSS, or written text on this page.</p>
-</section>
-
+    <figcaption>Home section hero image.<br><em>AI prompt used: "Gaming desk setup with a monitor keyboard and controller, RGB lighting, dark room, photorealistic"</em></figcaption>
+</figure>
+     <figure>
+    <img src="images/who-gamers.png" alt="A group of friends sitting together playing video games and laughing" width="700" height="400" />
+    <figcaption>About section image.<br><em>AI prompt used: "Group of diverse friends laughing and playing video games together on a couch, cozy living room, photorealistic"</em></figcaption>
+</figure>
+     <figure>
+    <img src="images/when-cozy.png" alt="Someone playing a video game on a couch wrapped in a blanket on a winter evening" width="700" height="400" />
+    <figcaption>Schedule section image.<br><em>AI prompt used: "Person wrapped in a blanket playing video games on a couch on a cozy winter evening, warm lighting, photorealistic"</em></figcaption>
+</figure>
+      <figure>
+    <img src="images/where-setup.png" alt="A home gaming desk setup with a monitor and controller in a cozy room" width="700" height="400" />
+    <figcaption>Places section image.<br><em>AI prompt used: "Cozy home gaming desk setup with monitor and controller, RGB lighting, dark room, photorealistic"</em></figcaption>
+</figure>
+      <figure>
+    <img src="images/how-start.png" alt="A simple beginner gaming setup with a console and controller on a clean desk" width="700" height="400" />
+    <figcaption>How to Play section image.<br><em>AI prompt used: "Simple beginner gaming setup with a console and controller on a clean white desk, bright lighting, photorealistic"</em></figcaption>
+</figure>
+     <figure>
+    <img src="images/why-fun.png" alt="Someone smiling while playing a video game, relaxed and having fun" width="700" height="400" />
+    <figcaption>Why I Love It section image.<br><em>AI prompt used: "Person smiling and relaxing while playing a video game, cozy room, warm lighting, photorealistic"</em></figcaption>
+</figure>
+      <p>No AI was used for the HTML, CSS, or written text on this page.</p>
+    </section>
 
   </main>
 
   <footer>
-    <p>Emily Mametz &bull; ITIS 3135 &bull; UNC Charlotte &bull; 2025</p>
-    <p>Images on this page were generated using AI image tools.</p>
+    <p>Site Designed by <a href="https://webpages.charlotte.edu/emametz/itis3135/mametzdesigns.html" target="_blank">Mametz Designs</a></p>
+    <p><em>"Precision in every pixel."</em></p>
     <div class="footer-links">
-      <a href="https://validator.w3.org/check?uri=referer" target="_blank" rel="noopener">Validate HTML</a>
-      <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener">Validate CSS</a>
-      <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/emametz/itis3135/hobby" target="_blank" rel="noopener">Check Accessibility</a>
-      <a href="../index.html">&#9670; Mametz Designs</a>
+        <a href="https://validator.w3.org/check?uri=referer" target="_blank" rel="noopener">Validate HTML</a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener">Validate CSS</a>
+        <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/emametz/itis3135/hobby" target="_blank" rel="noopener">Check Accessibility</a>
     </div>
-  </footer>
-
+    <p>Emily Mametz &bull; ITIS 3135 &bull; UNC Charlotte &bull; 2026</p>
+</footer>
   <script>
     (function () {
       var links    = document.querySelectorAll('.nav-link');
