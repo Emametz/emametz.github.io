@@ -1,30 +1,233 @@
+/* ── Colors ── */
 
+:root {
+  --color-bg:        #1E2A38;
+  --color-surface:   #2D3F52;
+  --color-accent:    #6BBFA0;
+  --color-accent-dk: #4A9E82;
+  --color-text:      #E8EEF4;
+  --color-muted:     #A8C4B8;
+  --color-border:    rgba(168, 196, 184, 0.2);
+}
+
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-   font-family: Arial, sans-serif;
-   max-width: 900px;
-   margin: 0 auto;
-   padding: 20px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+/* ── Typography ── */
 h1 {
-   color: #005035;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
 }
 
+h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-muted);
+}
+
+p {
+  color: var(--color-muted);
+  margin-bottom: 1rem;
+}
+
+/* ── Links ── */
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--color-text);
+}
+
+/* ── Header ── */
+header {
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  margin-bottom: 0.75rem;
+}
+
+/* ── Nav ── */
 nav {
-   margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0;
+  margin-bottom: 0.25rem;
 }
 
 nav a {
-   text-decoration: none;
-   color: #005035;
+  color: var(--color-muted);
+  font-size: 0.875rem;
+  padding: 2px 0;
+  transition: color 0.15s ease;
 }
 
 nav a:hover {
-   text-decoration: underline;
+  color: var(--color-accent);
 }
 
+nav a.active {
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+/* ── Main ── */
+main {
+  flex: 1;
+  background-color: var(--color-surface);
+  padding: 2rem;
+  max-width: 960px;
+  width: 100%;
+  margin: 2rem auto;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+}
+
+/* ── Buttons ── */
+button,
+input[type="submit"] {
+  background-color: var(--color-accent);
+  color: #0D3328;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: var(--color-accent-dk);
+}
+
+/* ── Form Inputs ── */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  width: 100%;
+  transition: border-color 0.15s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+/* ── Tables ── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th {
+  background-color: var(--color-bg);
+  color: var(--color-accent);
+  font-weight: 500;
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-muted);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* ── Images ── */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* ── Footer ── */
 footer {
-   margin-top: 30px;
-   font-size: 0.9em;
+  background-color: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+footer a {
+  color: var(--color-accent);
+}
+
+footer img {
+  height: 20px;
+  margin: 0 4px;
+  vertical-align: middle;
+  border-radius: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  header {
+    padding: 1rem;
+  }
+
+  main {
+    margin: 1rem;
+    padding: 1.25rem;
+  }
+
+  h1 {
+    font-size: 1.35rem;
+  }
+
+  nav {
+    gap: 0;
+  }
+}
+nav span {
+  color: var(--color-border);
+  padding: 0 6px;
 }
