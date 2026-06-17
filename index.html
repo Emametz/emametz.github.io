@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Emily Mametz | Personal Page</title>
+   <link rel="icon" type="image/png" href="images/favicon.png">
+   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
    <style>
       * {
          margin: 0;
@@ -12,111 +15,106 @@
 
       body {
          font-family: 'Georgia', serif;
-         background-color: #f0f4f0;
+         background-color: #e8f0e8;
          color: #2d3b2d;
-         line-height: 1.7;
+         line-height: 1.6;
       }
 
       header {
          background-color: #7a9e7e;
          color: #fff;
-         padding: 40px 20px;
+         padding: 20px 20px 14px;
          text-align: center;
       }
 
       header h1 {
-         font-size: 2.4rem;
+         font-size: 2.2rem;
          letter-spacing: 1px;
-         margin-bottom: 6px;
+         margin-bottom: 2px;
       }
 
-      header p {
-         font-size: 1.1rem;
+      header hr {
+         border: none;
+         border-top: 1px solid rgba(255,255,255,0.4);
+         margin: 6px auto;
+         width: 60%;
+      }
+
+      header h2 {
+         font-size: 1rem;
+         font-weight: normal;
          color: #e8f0e8;
-      }
-
-      nav {
-         background-color: #5c7f61;
-         text-align: center;
-         padding: 12px;
-      }
-
-      nav a {
-         color: #fff;
-         text-decoration: none;
-         font-size: 0.95rem;
+         font-style: italic;
          letter-spacing: 0.5px;
       }
 
-      nav a:hover {
-         text-decoration: underline;
-      }
-
       main {
-         max-width: 860px;
-         margin: 40px auto;
-         padding: 0 20px;
+         max-width: 820px;
+         margin: 18px auto;
+         padding: 0 16px;
       }
 
       section {
-         background-color: #fff;
+         background-color: #f4f8f4;
          border-left: 5px solid #7a9e7e;
          border-radius: 4px;
-         padding: 28px 32px;
-         margin-bottom: 30px;
-         box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+         padding: 18px 24px;
+         margin-bottom: 16px;
+         box-shadow: 0 2px 5px rgba(0,0,0,0.05);
       }
 
-      section h2 {
-         font-size: 1.3rem;
+      section h3 {
+         font-size: 1.15rem;
          color: #5c7f61;
-         margin-bottom: 12px;
+         margin-bottom: 8px;
          text-transform: uppercase;
          letter-spacing: 0.8px;
       }
 
-      section p {
-         font-size: 1rem;
+      section p,
+      section ul {
+         font-size: 0.97rem;
          color: #3a4a3a;
       }
 
       ul {
          padding-left: 20px;
-         color: #3a4a3a;
       }
 
       ul li {
-         margin-bottom: 6px;
+         margin-bottom: 4px;
       }
 
-      .course-link {
-         display: inline-block;
-         margin-top: 12px;
-         background-color: #7a9e7e;
-         color: #fff;
-         padding: 10px 22px;
-         border-radius: 4px;
-         text-decoration: none;
-         font-size: 0.95rem;
+      ul li a {
+         color: #3a6e40;
+         text-decoration: underline;
       }
 
-      .course-link:hover {
-         background-color: #5c7f61;
+      ul li a:visited {
+         color: #3a6e40;
+      }
+
+      ul li a:hover {
+         color: #5c7f61;
       }
 
       footer {
          text-align: center;
-         padding: 30px 20px;
-         font-size: 0.85rem;
+         padding: 14px 20px 20px;
+         font-size: 0.82rem;
          color: #6a826a;
       }
 
       .validators {
-         margin-top: 14px;
+         margin-top: 10px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 10px;
       }
 
       .validators img {
-         margin: 0 6px;
+         display: block;
       }
    </style>
 </head>
@@ -124,17 +122,14 @@
 
    <header>
       <h1>Emily Mametz</h1>
-      <p>Computer Science Student &amp; AI Enthusiast</p>
+      <hr>
+      <h2>Personal Page</h2>
    </header>
-
-   <nav>
-      <a href="https://webpages.charlotte.edu/emametz/">webpages.charlotte.edu/emametz</a>
-   </nav>
 
    <main>
 
       <section>
-         <h2>About Me</h2>
+         <h3>About Me</h3>
          <p>
             Hi, I'm Emily! I'm a Computer Science student at UNC Charlotte with a concentration in
             AI-Assisted Software Development. I'm passionate about building things, solving problems,
@@ -143,7 +138,17 @@
       </section>
 
       <section>
-         <h2>Interests &amp; Hobbies</h2>
+         <h3>Coursework</h3>
+         <ul>
+            <li>
+               <a href="https://webpages.charlotte.edu/emametz/itis3135/">ITIS 3135: Front-End Web App Development</a>
+            </li>
+            <li>ITIS 4166: Backend Application Development</li>
+         </ul>
+      </section>
+
+      <section>
+         <h3>Interests &amp; Hobbies</h3>
          <ul>
             <li>🎮 Gaming on my custom PC — my go-to way to unwind</li>
             <li>🐕 Spending time with my corgi</li>
@@ -152,27 +157,13 @@
          </ul>
       </section>
 
-      <section>
-         <h2>Course Work</h2>
-         <p>
-            I'm currently enrolled in ITIS 3135: Front-End Web App Development at UNCC.
-            You can view my course page and projects at the link below.
-         </p>
-         <a class="course-link" href="https://webpages.charlotte.edu/emametz/itis3135/">
-            View My ITIS 3135 Course Page &rarr;
-         </a>
-      </section>
-
    </main>
 
    <footer>
       <p>Emily Mametz &copy; 2026</p>
       <div class="validators">
-         <a href="https://validator.w3.org/check?uri=https://webpages.charlotte.edu/emametz/">
-            <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML">
-         </a>
-         <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://webpages.charlotte.edu/emametz/">
-            <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS">
+         <a href="https://achecker.achecks.ca/checker/index.php?uri=https://webpages.charlotte.edu/emametz/">
+            <img src="https://achecker.achecks.ca/images/achecker_logo.png" alt="WCAG Accessibility Checker" height="31">
          </a>
       </div>
    </footer>
