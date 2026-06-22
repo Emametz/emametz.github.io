@@ -78,16 +78,18 @@ header {
 .header-brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   margin-bottom: 0.75rem;
 }
 
 .site-logo {
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   object-fit: contain;
   border-radius: 50%;
-  background-color: transparent;
+  background-color: var(--color-text);
+  border: 3px solid var(--color-accent);
+  padding: 6px;
 }
 
 /* ── Nav ── */
@@ -325,5 +327,10 @@ footer img {
 
   nav {
     gap: 0;
+  }
+
+  .site-logo {
+    height: 90px;
+    width: 90px;
   }
 }
