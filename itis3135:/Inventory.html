@@ -1,53 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventory - Emily Mametz ITIS3135</title>
-    <link rel="stylesheet" href="default.css">
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gear Inventory - Mellow Manatee's Dive &amp; Snorkel Co.</title>
+   <link rel="stylesheet" href="default.css">
+   <style>
+      table {
+         width: 100%;
+         border-collapse: collapse;
+         margin-top: 1.5rem;
+      }
+      th, td {
+         border: 1px solid #1a6b8a;
+         padding: 0.7rem 1rem;
+         text-align: left;
+      }
+      th {
+         background-color: #1a6b8a;
+         color: #fff;
+      }
+      tr:nth-child(even) {
+         background-color: #e8f6fb;
+      }
+      .in-stock {
+         color: #256e2e;
+         font-weight: bold;
+      }
+      .low-stock {
+         color: #b36200;
+         font-weight: bold;
+      }
+      .out-of-stock {
+         color: #a01010;
+         font-weight: bold;
+      }
+   </style>
+   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <header>
-    <h1>Emily Mametz - ITIS3135</h1>
-   <nav>
-    <a href="https://webpages.charlotte.edu/emametz/itis3135/">Home</a> <span>||</span>
-    <a href="https://webpages.charlotte.edu/emametz/itis3135/contract.html">Contract</a> <span>||</span>
-    <a href="https://webpages.charlotte.edu/emametz/itis3135/introduction.html">Introduction</a> <span>||</span>
-    <a href="https://webpages.charlotte.edu/emametz/itis3135/about.html">About</a> <span>||</span>
-    <a href="https://webpages.charlotte.edu/emametz/itis3135/survey.html">Survey</a> <span>||</span>
-    <a href="https://webpages.charlotte.edu/emametz/itis3135/gallery.html">Gallery</a> <span>||</span>
-    <a href="https://webpages.charlotte.edu/emametz/itis3135/inventory.html">Inventory</a> <span>||</span>
-    <a href="https://webpages.charlotte.edu/emametz/itis3135/instructions.html">Instructions</a> <span>||</span>
-    <a href="https://webpages.charlotte.edu/emametz/itis3135/highlight.html">Highlight</a> <span>||</span>
-    <a href="#" class="nav-link" data-target="ai-prompts">AI Prompts</a> <span>||</span>
-    <a href="https://webpages.charlotte.edu/emametz/itis3135/website_evaluations/website_evaluations.html">Website Evaluations</a> <span>||</span>
+   <header>
+      <h1 class="header-title">Emily Mametz - ITIS3135</h1>
+     <nav aria-label="Course Navigation">
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/">Home</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/contract.html">Contract</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/survey.html">Survey</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/cards.html">Cards</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/inventory.html">Inventory</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/document.html">Documentation</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/product.html">Product</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/introduction.html">Introduction</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/about.html">About</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/gallery.html">Gallery</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/instructions.html">Instructions</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/highlight.html">Highlight</a> <span>||</span>
+   <a href="#" class="nav-link" data-target="ai-prompts">AI Prompts</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/website_evaluations/website_evaluations.html">Website Evaluations</a>
 </nav>
-<nav>
-    <a href="https://webpages.charlotte.edu/emametz/itis3135/stuff/My%20Page%20Blah.htm">Crappy Page</a> <span>||</span>
-    <a href="https://webpages.charlotte.edu/emametz/itis3135/hobby/index.html">Hobby</a>
+<nav aria-label="Other Pages">
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/stuff/My%20Page%20Blah.htm">Crappy Page</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/hobby/index.html">Hobby</a>
 </nav>
+   </header>
 
-</header>
+   <main>
+      <h2>Mellow Manatee's Gear Shop — Inventory</h2>
+      <p>Welcome to the stock list for Mellow Manatee's Dive &amp; Snorkel Co. gear shop. We keep things well-stocked so you can hit the water without a worry. All gear is inspected and cleaned between rentals. 🤿</p>
 
-    <main>
-        <h2>Inventory</h2>
-        <p>Content coming soon.</p>
-    </main>
+      <table>
+         <caption>Snorkel &amp; Dive Gear Inventory — Updated June 2026</caption>
+         <thead>
+            <tr>
+               <th>Item ID</th>
+               <th>Product Name</th>
+               <th>Category</th>
+               <th>Size(s)</th>
+               <th>Price (Buy)</th>
+               <th>Price (Rent/Day)</th>
+               <th>Qty in Stock</th>
+               <th>Status</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>MM-001</td>
+               <td>Mellow Manatee Signature Snorkel Mask</td>
+               <td>Mask</td>
+               <td>S / M / L</td>
+               <td>$49.99</td>
+               <td>$8.00</td>
+               <td>24</td>
+               <td class="in-stock">In Stock</td>
+            </tr>
+            <tr>
+               <td>MM-002</td>
+               <td>Dry-Top Snorkel Tube</td>
+               <td>Snorkel</td>
+               <td>Universal</td>
+               <td>$24.99</td>
+               <td>$4.00</td>
+               <td>30</td>
+               <td class="in-stock">In Stock</td>
+            </tr>
+            <tr>
+               <td>MM-003</td>
+               <td>Open-Heel Fin Set</td>
+               <td>Fins</td>
+               <td>XS / S / M / L / XL</td>
+               <td>$59.99</td>
+               <td>$10.00</td>
+               <td>18</td>
+               <td class="in-stock">In Stock</td>
+            </tr>
+            <tr>
+               <td>MM-004</td>
+               <td>Full-Foot Snorkel Fins</td>
+               <td>Fins</td>
+               <td>5–13 (US)</td>
+               <td>$39.99</td>
+               <td>$7.00</td>
+               <td>3</td>
+               <td class="low-stock">Low Stock</td>
+            </tr>
+            <tr>
+               <td>MM-005</td>
+               <td>3mm Shorty Wetsuit</td>
+               <td>Wetsuit</td>
+               <td>XS / S / M / L / XL</td>
+               <td>$89.99</td>
+               <td>$15.00</td>
+               <td>12</td>
+               <td class="in-stock">In Stock</td>
+            </tr>
+            <tr>
+               <td>MM-006</td>
+               <td>5mm Full Wetsuit</td>
+               <td>Wetsuit</td>
+               <td>S / M / L / XL</td>
+               <td>$129.99</td>
+               <td>$20.00</td>
+               <td>0</td>
+               <td class="out-of-stock">Out of Stock</td>
+            </tr>
+            <tr>
+               <td>MM-007</td>
+               <td>Underwater Camera (GoPro Hero 12)</td>
+               <td>Camera</td>
+               <td>N/A</td>
+               <td>$399.99</td>
+               <td>$35.00</td>
+               <td>5</td>
+               <td class="low-stock">Low Stock</td>
+            </tr>
+            <tr>
+               <td>MM-008</td>
+               <td>Waterproof Phone Pouch</td>
+               <td>Accessories</td>
+               <td>Universal</td>
+               <td>$14.99</td>
+               <td>N/A</td>
+               <td>40</td>
+               <td class="in-stock">In Stock</td>
+            </tr>
+            <tr>
+               <td>MM-009</td>
+               <td>Mesh Gear Bag</td>
+               <td>Accessories</td>
+               <td>One Size</td>
+               <td>$19.99</td>
+               <td>$3.00</td>
+               <td>22</td>
+               <td class="in-stock">In Stock</td>
+            </tr>
+            <tr>
+               <td>MM-010</td>
+               <td>Anti-Fog Spray (2 oz)</td>
+               <td>Accessories</td>
+               <td>N/A</td>
+               <td>$7.99</td>
+               <td>N/A</td>
+               <td>50</td>
+               <td class="in-stock">In Stock</td>
+            </tr>
+            <tr>
+               <td>MM-011</td>
+               <td>Reef-Safe Sunscreen SPF 50</td>
+               <td>Accessories</td>
+               <td>N/A</td>
+               <td>$12.99</td>
+               <td>N/A</td>
+               <td>35</td>
+               <td class="in-stock">In Stock</td>
+            </tr>
+            <tr>
+               <td>MM-012</td>
+               <td>Signal Safety Buoy</td>
+               <td>Safety</td>
+               <td>One Size</td>
+               <td>$29.99</td>
+               <td>$5.00</td>
+               <td>2</td>
+               <td class="low-stock">Low Stock</td>
+            </tr>
+            <tr>
+               <td>MM-013</td>
+               <td>Dive Light / Torch</td>
+               <td>Safety</td>
+               <td>N/A</td>
+               <td>$44.99</td>
+               <td>$8.00</td>
+               <td>8</td>
+               <td class="in-stock">In Stock</td>
+            </tr>
+            <tr>
+               <td>MM-014</td>
+               <td>Kids Snorkel Set (mask + fins + tube)</td>
+               <td>Kids Gear</td>
+               <td>Ages 4–10</td>
+               <td>$34.99</td>
+               <td>$9.00</td>
+               <td>10</td>
+               <td class="in-stock">In Stock</td>
+            </tr>
+            <tr>
+               <td>MM-015</td>
+               <td>Mellow Manatee Branded Towel</td>
+               <td>Merch</td>
+               <td>One Size</td>
+               <td>$22.99</td>
+               <td>N/A</td>
+               <td>0</td>
+               <td class="out-of-stock">Out of Stock</td>
+            </tr>
+         </tbody>
+      </table>
+   </main>
 
-    <footer>
-    <p>Page designed by <a href="mametzdesigns.com/">Mametz Designs</a> &copy; 2026</p>
-    <p>Certified in <a href="https://www.freecodecamp.org/certification/emametz1/responsive-web-design-v9" target="_blank">Responsive Web Design</a></p>
+   <footer>
+      <p>Page designed by <a href="mametzdesigns.com/">Mametz Designs</a> &copy; 2026</p>
+      <p>Certified in <a href="https://www.freecodecamp.org/certification/emametz1/responsive-web-design-v9" target="_blank">Responsive Web Design</a></p>
+      <a href="https://validator.w3.org/check?uri=referer">
+         <img src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+      </a>
+      <a href="https://jigsaw.w3.org/css-validator/check/referer">
+         <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+      </a>
+   </footer>
 
-    <a href="https://validator.w3.org/check?uri=referer">
-        <img src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
-    </a>
-    <a href="https://jigsaw.w3.org/css-validator/check/referer">
-        <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
-    </a>
-</footer>
-
-    <script src="scripts/HTMLInclude.min.js"></script>
+   <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>

@@ -1,5 +1,4 @@
 /* ── Colors ── */
-
 :root {
   --color-bg:        #1E2A38;
   --color-surface:   #2D3F52;
@@ -72,8 +71,23 @@ header {
   padding: 1rem 2rem;
 }
 
-header h1 {
+.header-title {
   margin-bottom: 0.75rem;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 0.75rem;
+}
+
+.site-logo {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+  border-radius: 50%;
+  background-color: transparent;
 }
 
 /* ── Nav ── */
@@ -95,9 +109,14 @@ nav a:hover {
   color: var(--color-accent);
 }
 
-nav a.active {
+.active {
   color: var(--color-accent);
   font-weight: 500;
+}
+
+nav span {
+  color: var(--color-muted);
+  padding: 0 6px;
 }
 
 /* ── Main ── */
@@ -110,6 +129,7 @@ main {
   margin: 2rem auto;
   border-radius: 10px;
   border: 1px solid var(--color-border);
+  box-sizing: border-box;
 }
 
 /* ── Buttons ── */
@@ -143,6 +163,7 @@ select {
   padding: 0.5rem 0.75rem;
   font-size: 0.9rem;
   width: 100%;
+  box-sizing: border-box;
   transition: border-color 0.15s ease;
 }
 
@@ -150,8 +171,87 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus,
 select:focus {
-  outline: none;
   border-color: var(--color-accent);
+}
+
+/* ── Survey / Fieldset Spacing ── */
+fieldset {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.5rem 1.75rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+fieldset + fieldset {
+  margin-top: 2.5rem;
+}
+
+legend {
+  color: var(--color-accent);
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+}
+
+fieldset label {
+  display: block;
+  color: var(--color-text);
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+fieldset input[type="number"] {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease;
+}
+
+fieldset input[type="number"]:focus {
+  border-color: var(--color-accent);
+}
+
+fieldset textarea {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+fieldset p {
+  color: var(--color-muted);
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Checkbox / radio rows */
+fieldset label input[type="checkbox"],
+fieldset label input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+/* Form action buttons */
+form button[type="submit"],
+form button[type="reset"] {
+  margin-top: 1.5rem;
+  margin-right: 0.75rem;
+}
+
+form button[type="reset"] {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+}
+
+form button[type="reset"]:hover {
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
 /* ── Tables ── */
@@ -219,15 +319,11 @@ footer img {
     padding: 1.25rem;
   }
 
-  h1 {
+  .header-title {
     font-size: 1.35rem;
   }
 
   nav {
     gap: 0;
   }
-}
-nav span {
-  color: var(--color-border);
-  padding: 0 6px;
 }
