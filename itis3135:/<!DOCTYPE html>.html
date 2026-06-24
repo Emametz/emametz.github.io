@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ITIS3135 Pictures Page</title>
+   <link rel="stylesheet" href="default.css">
+   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+   <header>
+      <h1 class="header-title">Emily Mametz - ITIS3135</h1>
+      <nav aria-label="Course Navigation">
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/">Home</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/contract.html">Contract</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/survey.html">Survey</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/cards.html">Cards</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/inventory.html">Inventory</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/document.html">Documentation</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/product.html">Product</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/pictures.html">Pictures</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/introduction.html">Introduction</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/about.html">About</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/gallery.html">Gallery</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/instructions.html">Instructions</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/highlight.html">Highlight</a> <span>||</span>
+   <a href="#" class="nav-link" data-target="ai-prompts">AI Prompts</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/website_evaluations/website_evaluations.html">Website Evaluations</a>
+</nav>
+<nav aria-label="Other Pages">
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/stuff/My%20Page%20Blah.htm">Crappy Page</a> <span>||</span>
+   <a href="https://webpages.charlotte.edu/emametz/itis3135/hobby/index.html">Hobby</a>
+</nav>
+   </header>
+
+   <main>
+      <h2>Everything Pictures</h2>
+      <p>This page demonstrates how images behave across different formats, sizes, and proportions on the web. It explores the difference between a large, high-quality source photo and a personal photo taken on a phone, showing how each can be converted to different formats (JPG, GIF, greyscale, black and white), properly resized for the web, improperly stretched or squished, and improperly enlarged from a too-small source. The goal is to understand how image size and proportion choices affect load times, visual quality, and overall site performance.</p>
+
+      <section>
+         <h3>Demonstrating Image Manipulation with an Underwater Manatee Photo from Pexels.com</h3>
+         <p>I chose this photo because it fit the dive and snorkel theme of my course site perfectly, and the close-up framing and fine detail in the manatee's skin texture made it a great candidate for testing how different formats and sizes affect image quality. The photo was taken by photographer Jorge Luis Morales on Pexels, who has a number of other underwater wildlife photos in his portfolio. The original image is a JPG, 6000 x 4000 pixels, and approximately 1.56 MB in size.</p>
+
+         <article>
+            <h4>Original Image</h4>
+            <figure>
+               <a href="images/underwater-manatee-closeup-12237825@jorge-luis-morales_pexels.jpg" target="_blank">
+                  <img src="images/underwater-manatee-closeup-12237825@jorge-luis-morales_pexels.jpg" alt="Close-up underwater photo of a manatee" width="600">
+               </a>
+               <figcaption>Click to open the original image in its full JPG format.</figcaption>
+            </figure>
+         </article>
+
+         <article>
+            <h4>Original Image as a GIF</h4>
+            <figure>
+               <a href="images/underwater-manatee-closeup-12237825@jorge-luis-morales_pexels.gif" target="_blank">
+                  <img src="images/underwater-manatee-closeup-12237825@jorge-luis-morales_pexels.gif" alt="Manatee image converted to GIF format" width="600">
+               </a>
+               <figcaption>The same image exported as a GIF. Notice the loss of subtle color detail in the water due to GIF's limited 256-color palette.</figcaption>
+            </figure>
+         </article>
+
+         <article>
+            <h4>Greyscale Version</h4>
+            <figure>
+               <a href="images/underwater-manatee-closeup-12237825@jorge-luis-morales_pexels-greyscale.jpg" target="_blank">
+                  <img src="images/underwater-manatee-closeup-12237825@jorge-luis-morales_pexels-greyscale.jpg" alt="Manatee image in greyscale" width="600">
+               </a>
+               <figcaption>Desaturated version of the original image, removing all color while keeping tonal range.</figcaption>
+            </figure>
+         </article>
+
+         <article>
+            <h4>Black and White Version</h4>
+            <figure>
+               <a href="images/underwater-manatee-closeup-12237825@jorge-luis-morales_pexels-blackandwhite.jpg" target="_blank">
+                  <img src="images/underwater-manatee-closeup-12237825@jorge-luis-morales_pexels-blackandwhite.jpg" alt="Manatee image in pure black and white" width="600">
+               </a>
+               <figcaption>A true black and white version using GIMP's Threshold tool, producing only pure black and white pixels.</figcaption>
+            </figure>
+         </article>
+
+         <hr>
+
+         <article>
+            <h4>Downsizing Images with CSS</h4>
+            <figure>
+               <img src="images/underwater-manatee-closeup-12237825@jorge-luis-morales_pexels.jpg" alt="Original manatee image resized with CSS" style="width: 900px; height: 600px;">
+               <figcaption>The original full-size image displayed at a much smaller size using inline CSS, while keeping the original file's full proportions.</figcaption>
+            </figure>
+         </article>
+
+         <article>
+            <h4>Proper Reduction of Image with Editor</h4>
+            <figure>
+               <img src="images/underwater-manatee-closeup-12237825@jorge-luis-morales_pexels-600x400.jpg" alt="Manatee image properly resized in GIMP to 600 by 400 pixels" width="600" height="400">
+               <figcaption>This image was actually resized in GIMP to 600x400, rather than just scaled with CSS, resulting in a much smaller file size for faster loading.</figcaption>
+            </figure>
+         </article>
+
+         <hr>
+
+         <article>
+            <h4>Improper Image Proportions with CSS</h4>
+            <p>The following four images all started from the properly resized 600x400 image, but have been stretched or squished to incorrect proportions:</p>
+            <figure style="display: inline-block;">
+               <img src="images/underwater-manatee-closeup-12237825@jorge-luis-morales_pexels-600x268.jpg" alt="Manatee image squished vertically" width="600" height="268">
+               <figcaption>Squished vertically to 600x268 (height reduced 33%).</figcaption>
+            </figure>
+            <figure style="display: inline-block;">
+               <img src="images/underwater-manatee-closeup-12237825@jorge-luis-morales_pexels-600x180.jpg" alt="Manatee image squished vertically further" width="600" height="180">
+               <figcaption>Squished vertically even further to 600x180 (height reduced another 33%).</figcaption>
+            </figure>
+            <figure style="display: inline-block;">
+               <img src="images/underwater-manatee-closeup-12237825@jorge-luis-morales_pexels-402x400.jpg" alt="Manatee image squished horizontally" width="402" height="400">
+               <figcaption>Squished horizontally to 402x400 (width reduced 33%).</figcaption>
+            </figure>
+            <figure style="display: inline-block;">
+               <img src="images/underwater-manatee-closeup-12237825@jorge-luis-morales_pexels-269x400.jpg" alt="Manatee image squished horizontally further" width="269" height="400">
+               <figcaption>Squished horizontally even further to 269x400 (width reduced another 33%).</figcaption>
+            </figure>
+         </article>
+
+         <hr>
+
+         <article>
+            <h4>Improper Enlarging with CSS</h4>
+            <figure style="display: inline-block;">
+               <img src="images/underwater-manatee-closeup-12237825@jorge-luis-morales_pexels-600x400.jpg" alt="Properly sized manatee image at 600x400" style="width: 600px; height: 400px;">
+               <figcaption>Properly sized 600x400 image displayed at its native size.</figcaption>
+            </figure>
+            <figure style="display: inline-block;">
+               <img src="images/underwater-manatee-closeup-12237825@jorge-luis-morales_pexels-150x100.jpg" alt="Small manatee image enlarged with CSS, showing pixelation" style="width: 600px; height: 400px;">
+               <figcaption>A tiny 150x100 image forced up to 600x400 with CSS, showing clear pixelation and quality loss.</figcaption>
+            </figure>
+         </article>
+      </section>
+
+      <hr>
+
+      <section>
+         <h3>Demonstrating Image Manipulation with a Personal Photo of a Candle Lid</h3>
+         <p>For my personal geometry photo, I chose a round candle lid from White Barn, held next to my hand for scale and proportion comparison. The photo was taken on my iPhone and shows my hands holding the lid in my living room. The original image is 4284 x 5712 pixels.</p>
+
+         <article>
+            <h4>Original Image</h4>
+            <figure>
+               <a href="images/candle-lid-with-hands@emametz.jpg" target="_blank">
+                  <img src="images/candle-lid-with-hands@emametz.jpg" alt="Hands holding a round White Barn candle lid" width="450">
+               </a>
+               <figcaption>Click to open the original image in its full JPG format.</figcaption>
+            </figure>
+         </article>
+
+         <article>
+            <h4>Original Image as a GIF</h4>
+            <figure>
+               <a href="images/candle-lid-with-hands@emametz.gif" target="_blank">
+                  <img src="images/candle-lid-with-hands@emametz.gif" alt="Candle lid photo converted to GIF format" width="450">
+               </a>
+               <figcaption>The same image exported as a GIF, showing the reduced color palette compared to the original JPG.</figcaption>
+            </figure>
+         </article>
+
+         <article>
+            <h4>Greyscale Version</h4>
+            <figure>
+               <a href="images/candle-lid-with-hands@emametz-greyscale.jpg" target="_blank">
+                  <img src="images/candle-lid-with-hands@emametz-greyscale.jpg" alt="Candle lid photo in greyscale" width="450">
+               </a>
+               <figcaption>Desaturated version of the original image.</figcaption>
+            </figure>
+         </article>
+
+         <article>
+            <h4>Black and White Version</h4>
+            <figure>
+               <a href="images/candle-lid-with-hands@emametz-blackandwhite.jpg" target="_blank">
+                  <img src="images/candle-lid-with-hands@emametz-blackandwhite.jpg" alt="Candle lid photo in pure black and white" width="450">
+               </a>
+               <figcaption>True black and white version using GIMP's Threshold tool.</figcaption>
+            </figure>
+         </article>
+
+         <hr>
+
+         <article>
+            <h4>Downsizing Images with CSS</h4>
+            <figure>
+               <img src="images/candle-lid-with-hands@emametz.jpg" alt="Original candle lid image resized with CSS" style="width: 900px; height: 1200px;">
+               <figcaption>The original full-size image displayed at a smaller size using inline CSS, keeping the original proportions.</figcaption>
+            </figure>
+         </article>
+
+         <article>
+            <h4>Proper Reduction of Image with Editor</h4>
+            <figure>
+               <img src="images/candle-lid-with-hands@emametz-600x800.jpg" alt="Candle lid image properly resized in GIMP to 600 by 800 pixels" width="600" height="800">
+               <figcaption>This image was actually resized in GIMP to 600x800, resulting in a much smaller file size for faster loading.</figcaption>
+            </figure>
+         </article>
+
+         <hr>
+
+         <article>
+            <h4>Improper Image Proportions with CSS</h4>
+            <p>The following four images all started from the properly resized 600x800 image, but have been stretched or squished to incorrect proportions:</p>
+            <figure style="display: inline-block;">
+               <img src="images/candle-lid-with-hands@emametz-600x536.jpg" alt="Candle lid image squished vertically" width="600" height="536">
+               <figcaption>Squished vertically to 600x536 (height reduced 33%).</figcaption>
+            </figure>
+            <figure style="display: inline-block;">
+               <img src="images/candle-lid-with-hands@emametz-600x359.jpg" alt="Candle lid image squished vertically further" width="600" height="359">
+               <figcaption>Squished vertically even further to 600x359 (height reduced another 33%).</figcaption>
+            </figure>
+            <figure style="display: inline-block;">
+               <img src="images/candle-lid-with-hands@emametz-402x800.jpg" alt="Candle lid image squished horizontally" width="402" height="800">
+               <figcaption>Squished horizontally to 402x800 (width reduced 33%).</figcaption>
+            </figure>
+            <figure style="display: inline-block;">
+               <img src="images/candle-lid-with-hands@emametz-269x800.jpg" alt="Candle lid image squished horizontally further" width="269" height="800">
+               <figcaption>Squished horizontally even further to 269x800 (width reduced another 33%).</figcaption>
+            </figure>
+         </article>
+
+         <hr>
+
+         <article>
+            <h4>Improper Enlarging with CSS</h4>
+            <figure style="display: inline-block;">
+               <img src="images/candle-lid-with-hands@emametz-600x800.jpg" alt="Properly sized candle lid image at 600x800" style="width: 450px; height: 600px;">
+               <figcaption>Properly sized 600x800 image displayed at a scaled-down size.</figcaption>
+            </figure>
+            <figure style="display: inline-block;">
+               <img src="images/candle-lid-with-hands@emametz-150x200.jpg" alt="Small candle lid image enlarged with CSS, showing pixelation" style="width: 450px; height: 600px;">
+               <figcaption>A tiny 150x200 image forced up to 450x600 with CSS, showing clear pixelation and quality loss.</figcaption>
+            </figure>
+         </article>
+      </section>
+
+      <hr>
+
+      <section>
+         <h3>AI Usage and Reflection</h3>
+         <p>I used Claude to help with some image editing and resizing in GIMP.</p>
+         <p>My biggest challenge was keeping track of all the different exported file versions and making sure I always returned to a clean base image in GIMP before creating each new stretched version, rather than accidentally stacking edits on top of each other. I learned just how much of a difference proper resizing in an image editor makes compared to relying on CSS alone, both in visual quality and file size.</p>
+      </section>
+   </main>
+
+   <footer>
+      <p>Page designed by <a href="mametzdesigns.com/">Mametz Designs</a> &copy; 2026</p>
+      <p>Certified in <a href="https://www.freecodecamp.org/certification/emametz1/responsive-web-design-v9" target="_blank">Responsive Web Design</a></p>
+      <a href="https://validator.w3.org/check?uri=referer">
+         <img src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+      </a>
+      <a href="https://jigsaw.w3.org/css-validator/check/referer">
+         <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+      </a>
+   </footer>
+
+   <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
